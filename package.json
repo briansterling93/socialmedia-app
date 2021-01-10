@@ -12,6 +12,8 @@
   "author": "Brian Sterling",
   "license": "ISC",
   "dependencies": {
+    "@types/react-router-dom": "^5.1.7",
+    "@types/styled-components": "^5.1.7",
     "bcryptjs": "^2.4.3",
     "config": "^3.3.3",
     "express": "^4.17.1",
