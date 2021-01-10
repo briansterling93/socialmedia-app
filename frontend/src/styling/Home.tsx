@@ -33,7 +33,15 @@ export const ItemArray = styled.div`
 `;
 
 export const ItemArray1 = styled.div`
-  background-color: #1da1f2;
+  // background-color: #1da1f2;
+  // background-size: cover;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(19, 153, 243, 0.8),
+    rgba(117, 213, 239, 0.8)
+  );
+  background-size: cover;
+
   height: 100vh;
   width: 50%;
 `;
@@ -82,14 +90,26 @@ export const ButtonSpacer = styled.div`
   .loginBtn {
     background-color: #1da1f2;
     color: white;
+
+    :hover {
+      background-color: #007cce;
+    }
   }
 
   .guestBtn {
     background-color: #1da1f2;
     color: white;
+
+    :hover {
+      background-color: #007cce;
+    }
   }
 
   .createBtn {
     border: 1px solid #1da1f2;
+
+    :hover {
+      background-color: #f0faff;
+    }
   }
 `;
