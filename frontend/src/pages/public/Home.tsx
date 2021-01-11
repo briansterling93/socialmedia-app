@@ -6,14 +6,32 @@ import {
   ItemArray2,
   Form,
   ButtonSpacer,
+  ImgSpacer,
 } from "../../styling/Home";
+import homeLogo1 from "../../imgs/homeLogo1.png";
+import homeLogo2 from "../../imgs/homeLogo2.png";
+import homeLogo3 from "../../imgs/homeLogo3.png";
 
 const Home: React.FC = () => {
   return (
     <div>
       <MainSection>
         <SecondarySection>
-          <ItemArray1>Background image</ItemArray1>
+          <ItemArray1>
+            <ImgSpacer>
+              <img src={homeLogo1} />
+              <p>Join the discussion!</p>
+            </ImgSpacer>
+            <ImgSpacer>
+              {" "}
+              <img src={homeLogo2} />
+              <p>Voice your opinions</p>
+            </ImgSpacer>
+            <ImgSpacer>
+              <img src={homeLogo3} />
+              <p>Connect with others</p>
+            </ImgSpacer>
+          </ItemArray1>
           <ItemArray2>
             {" "}
             <h1>

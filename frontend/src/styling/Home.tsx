@@ -33,17 +33,41 @@ export const ItemArray = styled.div`
 `;
 
 export const ItemArray1 = styled.div`
-  // background-color: #1da1f2;
-  // background-size: cover;
   background-image: linear-gradient(
     to right bottom,
     rgba(19, 153, 243, 0.8),
-    rgba(117, 213, 239, 0.8)
+    rgba(97, 180, 236, 0.8)
   );
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   height: 100vh;
   width: 50%;
+
+  img {
+    height: 3.5rem;
+    width: 5rem;
+    cursor: text;
+  }
+
+  p {
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: "Segoe UI", Arial, sans-serif;
+  }
+`;
+
+export const ImgSpacer = styled.div`
+  padding: 0.6rem;
+
+  display: flex;
+  flex-direction: row;
+
+  width: 20rem;
 `;
 
 export const ItemArray2 = styled.div`
