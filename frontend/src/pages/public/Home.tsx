@@ -24,7 +24,6 @@ const Home: React.FC = () => {
               <p>Join the discussion!</p>
             </ImgSpacer>
             <ImgSpacer>
-              {" "}
               <img src={homeLogo2} />
               <p>Voice your opinions</p>
             </ImgSpacer>
@@ -34,7 +33,6 @@ const Home: React.FC = () => {
             </ImgSpacer>
           </ItemArray1>
           <ItemArray2>
-            {" "}
             <h1>
               See what's happening in <br /> the sports world!
             </h1>
@@ -48,7 +46,9 @@ const Home: React.FC = () => {
                 </NavLink>
               </ButtonSpacer>
               <ButtonSpacer>
-                <button className="loginBtn">Log In</button>
+                <NavLink to="login">
+                  <button className="loginBtn">Log In</button>
+                </NavLink>
               </ButtonSpacer>
             </Form>
           </ItemArray2>

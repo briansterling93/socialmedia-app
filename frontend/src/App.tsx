@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 import Home from "./pages/public/Home";
+import Login from "./pages/public/Login";
 import CreateAccount from "./pages/public/CreateAccount";
 
 const Universal = createGlobalStyle`
@@ -28,6 +29,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/createaccount" component={CreateAccount} />
+        <Route exact path="/login" component={Login} />
       </Switch>
     </Router>
   );

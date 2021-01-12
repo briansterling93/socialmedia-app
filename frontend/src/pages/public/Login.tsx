@@ -9,40 +9,31 @@ import {
   ErrorMsg,
 } from "../../styling/CreateAccount";
 
-const CreateAccount: React.FC = () => {
+const Login: React.FC = () => {
   return (
     <MainSection>
       <SecondarySection>
         <ItemArray>
-          <h1>Create an account</h1>
+          <h1>Sign in</h1>
           <FormSection>
             {" "}
             <InputSpacer>
-              <input type="text" placeholder="First name" />
+              <input type="text" placeholder="Email address" />
               <ErrorMsg></ErrorMsg>
             </InputSpacer>
             <InputSpacer>
               {" "}
-              <input type="text" placeholder="Desired display name" />
-              <ErrorMsg></ErrorMsg>
-            </InputSpacer>
-            <InputSpacer>
-              {" "}
-              <input type="password" placeholder="Password" />
-              <ErrorMsg></ErrorMsg>
-            </InputSpacer>
-            <InputSpacer>
-              {" "}
-              <input type="password" placeholder="Confirm password" />
+              <input type="text" placeholder="Password" />
               <ErrorMsg></ErrorMsg>
             </InputSpacer>
             <InputSpacer>
               {" "}
               <NavLink to="/">
-                <button>Join the fun!</button>
+                <button>Login</button>
               </NavLink>
             </InputSpacer>
-            Already have an account? <NavLink to="/login">Sign in Here</NavLink>
+            Don't have an account?
+            <NavLink to="/createaccount">Create one here</NavLink>
           </FormSection>
         </ItemArray>
       </SecondarySection>
@@ -50,4 +41,4 @@ const CreateAccount: React.FC = () => {
   );
 };
 
-export default CreateAccount;
+export default Login;

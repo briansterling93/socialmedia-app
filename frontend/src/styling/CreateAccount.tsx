@@ -55,6 +55,10 @@ export const FormSection = styled.div`
       background-color: #007cce;
     }
   }
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 export const InputSpacer = styled.div`
