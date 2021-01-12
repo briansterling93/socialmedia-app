@@ -48,7 +48,7 @@ export const ItemArray1 = styled.div`
   width: 50%;
 
   img {
-    height: 3.5rem;
+    height: 2.5rem;
     width: 5rem;
     cursor: text;
   }
@@ -65,6 +65,9 @@ export const ImgSpacer = styled.div`
   padding: 0.6rem;
 
   display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-rigth
   flex-direction: row;
 
   width: 20rem;
@@ -87,11 +90,6 @@ export const Form = styled.div`
     height: 1.6rem;
     outline: none;
     border: 1.7px solid #999;
-
-    :focus {
-      outline: none;
-      border-color: #1da1f2;
-    }
   }
 `;
 

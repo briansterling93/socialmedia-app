@@ -2,9 +2,11 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 import Home from "./pages/public/Home";
+import CreateAccount from "./pages/public/CreateAccount";
 
 const Universal = createGlobalStyle`
  body {
+    font-family: "Segoe UI", Arial, sans-serif;
     padding: 0;
     box-sizing: none;
     margin: 0;
@@ -21,9 +23,13 @@ const Universal = createGlobalStyle`
 
 function App() {
   return (
-    <div>
-      <Home />
-    </div>
+    <Router>
+      <Universal />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/createaccount" component={CreateAccount} />
+      </Switch>
+    </Router>
   );
 }
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import {
   MainSection,
   SecondarySection,
@@ -42,7 +43,9 @@ const Home: React.FC = () => {
                 <button className="guestBtn">Continue as Guest</button>
               </ButtonSpacer>
               <ButtonSpacer>
-                <button className="createBtn">Create an Account</button>
+                <NavLink to="/createaccount">
+                  <button className="createBtn">Create an Account</button>
+                </NavLink>
               </ButtonSpacer>
               <ButtonSpacer>
                 <button className="loginBtn">Log In</button>
