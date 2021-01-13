@@ -1,10 +1,8 @@
-## Sports Talk (Social Media Platform)
+## Sports Connect (Twitter Inspired Social Media Platform)
 
-Sports Talk is a twitter inspired, social media platform. Users will have the ability to create a profile and post different "twits" pertaining to different sports events and outcomes. There will be a hashtag assigned to each tweet, which will make it convenient for users to filter through different "twits", only displaying the specific sport of choice (MLB, NBA, NFL, etc)
+Sports Connect is a twitter inspired, social media platform. Users will have the ability to create a profile and post different things (similar to tweets on twitter). There will be a hashtag assigned to each tweet, which will make it convenient for users to filter through different discussions of their interest. The application itself will have the general features accessible within the actual Twitter platform.
 
-This full stack application will be built using React and JavaScript within the front-end, while the backend configuring will consist of MySQL, Node, and Express.
-
-Sports Talk is currently within the creation process. Feel free to check back later for the live version!
+Sports Connect is currently under development. Feel free to check back later for the live version!
 
 ## Languages Used
 

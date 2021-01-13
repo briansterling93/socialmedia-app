@@ -33,11 +33,13 @@ export const ItemArray = styled.div`
 `;
 
 export const ItemArray1 = styled.div`
-  background-image: linear-gradient(
-    to right bottom,
-    rgba(19, 153, 243, 0.8),
-    rgba(97, 180, 236, 0.8)
-  );
+  background-color: rgba(29, 161, 242, 1);
+
+  // background-image: linear-gradient(
+  //   to right bottom,
+  //   rgba(29, 161, 242, 1),
+  //   rgba(19, 153, 243, 0.8)
+  // );
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -56,8 +58,13 @@ export const ItemArray1 = styled.div`
   p {
     color: black;
     font-size: 1.1rem;
+
     font-weight: 700;
     font-family: "Segoe UI", Arial, sans-serif;
+
+    :hover {
+      color: white;
+    }
   }
 `;
 

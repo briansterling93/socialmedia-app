@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import mainLogo from "../../imgs/mainLogo.png";
 import {
   MainSection,
   SecondarySection,
@@ -13,6 +14,10 @@ const CreateAccount: React.FC = () => {
   return (
     <MainSection>
       <SecondarySection>
+        <NavLink to="/">
+          {" "}
+          <img src={mainLogo} />
+        </NavLink>
         <ItemArray>
           <h1>Create an account</h1>
           <FormSection>
@@ -24,6 +29,11 @@ const CreateAccount: React.FC = () => {
             <InputSpacer>
               {" "}
               <input type="text" placeholder="Desired display name" />
+              <ErrorMsg></ErrorMsg>
+            </InputSpacer>
+            <InputSpacer>
+              {" "}
+              <input type="text" placeholder="Email address" />
               <ErrorMsg></ErrorMsg>
             </InputSpacer>
             <InputSpacer>
@@ -42,7 +52,7 @@ const CreateAccount: React.FC = () => {
                 <button>Join the fun!</button>
               </NavLink>
             </InputSpacer>
-            Already have an account? <NavLink to="/login">Sign in Here</NavLink>
+            <NavLink to="/login">Sign in Here</NavLink>
           </FormSection>
         </ItemArray>
       </SecondarySection>

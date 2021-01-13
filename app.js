@@ -13,6 +13,8 @@ const app = express();
 
 app.use(express.json({ extended: false })); //body parser
 
+app.use("/user", require("./routes/user"));
+
 app.get("/", (req, res) => {
   res.send("heyyyyy");
 });

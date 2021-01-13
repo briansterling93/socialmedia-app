@@ -12,10 +12,15 @@ export const SecondarySection = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+
+  img {
+    height: 3rem;
+    width: 6rem;
+    margin-top: 0.3rem;
+  }
 `;
 
 export const ItemArray = styled.div`
-  margin-top: 2rem;
   h1 {
     font-size: 1.5rem;
   }
@@ -41,7 +46,7 @@ export const FormSection = styled.div`
   button {
     width: 31rem;
     color: white;
-    height: 2.5rem;
+    height: 3rem;
     background-color: #1da1f2;
     outline: none;
     border: none;
@@ -58,6 +63,8 @@ export const FormSection = styled.div`
 
   a {
     text-decoration: none;
+
+    color: rgba(27, 149, 224);
   }
 `;
 
