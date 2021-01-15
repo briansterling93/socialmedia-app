@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MainSection = styled.div`
-  background-color: white;
+  background-color: #73c3f7;
 
   display: flex;
   justify-content: center;
@@ -33,13 +33,8 @@ export const ItemArray = styled.div`
 `;
 
 export const ItemArray1 = styled.div`
-  background-color: rgba(29, 161, 242, 1);
+  background-color: #0793f0;
 
-  // background-image: linear-gradient(
-  //   to right bottom,
-  //   rgba(29, 161, 242, 1),
-  //   rgba(19, 153, 243, 0.8)
-  // );
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -49,22 +44,11 @@ export const ItemArray1 = styled.div`
   height: 100vh;
   width: 50%;
 
-  img {
-    height: 2.5rem;
-    width: 5rem;
-    cursor: text;
-  }
-
   p {
-    color: black;
-    font-size: 1.1rem;
+    color: white;
+    font-size: 1.2rem;
 
     font-weight: 700;
-    font-family: "Segoe UI", Arial, sans-serif;
-
-    :hover {
-      color: white;
-    }
   }
 `;
 
@@ -73,12 +57,14 @@ export const ImgSpacer = styled.div`
 
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding-rigth
+  p {
+    padding-left: 1rem;
+  }
   flex-direction: row;
-
-  width: 20rem;
+  width: 25rem;
 `;
+
+export const ImportedImg = styled.div``;
 
 export const ItemArray2 = styled.div`
   background-color: white;
@@ -89,6 +75,29 @@ export const ItemArray2 = styled.div`
   align-items: center;
   height: 100vh;
   width: 50%;
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  #twitter-title {
+    height: 10rem;
+    width: 20rem;
+    text-align: left;
+  }
+
+  #twitter-logo {
+    text-align: left;
+    width: 20rem;
+  }
+
+  #join-language {
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-align: left;
+    padding-left: 1rem;
+    padding-bottom: 0.5rem;
+  }
 `;
 
 export const Form = styled.div`
@@ -104,7 +113,7 @@ export const ButtonSpacer = styled.div`
   padding: 0.4rem;
 
   button {
-    width: 19rem;
+    width: 21rem;
     height: 2.5rem;
     background-color: white;
     outline: none;

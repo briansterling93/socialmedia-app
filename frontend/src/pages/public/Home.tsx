@@ -1,5 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { AiOutlineSearch } from "react-icons/ai";
+import { MdPeopleOutline } from "react-icons/md";
+import { BiMessageRounded } from "react-icons/bi";
+import { AiOutlineTwitter } from "react-icons/ai";
 import {
   MainSection,
   SecondarySection,
@@ -8,10 +12,8 @@ import {
   Form,
   ButtonSpacer,
   ImgSpacer,
+  ImportedImg,
 } from "../../styling/Home";
-import homeLogo1 from "../../imgs/homeLogo1.png";
-import homeLogo2 from "../../imgs/homeLogo2.png";
-import homeLogo3 from "../../imgs/homeLogo3.png";
 
 const Home: React.FC = () => {
   return (
@@ -20,23 +22,34 @@ const Home: React.FC = () => {
         <SecondarySection>
           <ItemArray1>
             <ImgSpacer>
-              <img src={homeLogo1} />
-              <p>Join the discussion!</p>
+              <ImportedImg>
+                <AiOutlineSearch size={35} color={"white"} />
+              </ImportedImg>
+              <p>Follow your interests.</p>
             </ImgSpacer>
             <ImgSpacer>
-              <img src={homeLogo2} />
-              <p>Voice your opinions</p>
+              <ImportedImg>
+                <MdPeopleOutline size={35} color={"white"} />
+              </ImportedImg>
+              <p>See what others are discussing.</p>
             </ImgSpacer>
             <ImgSpacer>
-              <img src={homeLogo3} />
-              <p>Connect with others</p>
+              <ImportedImg>
+                <BiMessageRounded size={35} color={"white"} />
+              </ImportedImg>
+              <p>Connect with others.</p>
             </ImgSpacer>
           </ItemArray1>
           <ItemArray2>
-            <h1>
-              See what's happening in <br /> the sports world!
-            </h1>
+            <div id="twitter-logo">
+              <AiOutlineTwitter size={35} />
+            </div>
+            <div id="twitter-title">
+              {" "}
+              <h1>See what's happening in our world right now</h1>
+            </div>
             <Form>
+              <div id="join-language">Join Tweetclone Today.</div>
               <ButtonSpacer>
                 <button className="guestBtn">Continue as Guest</button>
               </ButtonSpacer>
