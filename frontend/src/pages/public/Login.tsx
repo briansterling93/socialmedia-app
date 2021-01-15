@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import mainLogo from "../../imgs/mainLogo.png";
+import { AiOutlineTwitter } from "react-icons/ai";
 import {
   MainSection,
   SecondarySection,
@@ -15,11 +16,12 @@ const Login: React.FC = () => {
     <MainSection>
       <SecondarySection>
         <NavLink to="/">
-          {" "}
-          <img src={mainLogo} />
+          <div id="twitter-logo">
+            <AiOutlineTwitter size={35} color={"black"} />
+          </div>
         </NavLink>
         <ItemArray>
-          <h1>Log in to Sports-Connect</h1>
+          <h1>Log in to Tweetclone</h1>
           <FormSection>
             {" "}
             <InputSpacer>

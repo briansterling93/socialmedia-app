@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useReducer } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { StateContext, initialState, reducer } from "./context/StateContext";
 import { createGlobalStyle } from "styled-components";
 import Home from "./pages/public/Home";
 import Login from "./pages/public/Login";
@@ -15,23 +16,22 @@ const Universal = createGlobalStyle`
       font-family: "Segoe UI";
     }
 
-  //   ::-webkit-scrollbar{
-  //     width: 0px;
-  //     background: transparent;
-  // }
-  }
+
 `;
 
 function App() {
+  const [state, dispatch] = useReducer<any>(reducer, initialState);
   return (
-    <Router>
-      <Universal />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/createaccount" component={CreateAccount} />
-        <Route exact path="/login" component={Login} />
-      </Switch>
-    </Router>
+    <StateContext.Provider value={{ state, dispatch }}>
+      <Router>
+        <Universal />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/createaccount" component={CreateAccount} />
+          <Route exact path="/login" component={Login} />
+        </Switch>
+      </Router>
+    </StateContext.Provider>
   );
 }
 

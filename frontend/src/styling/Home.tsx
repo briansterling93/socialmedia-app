@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const MainSection = styled.div`
   background-color: #73c3f7;
-
   display: flex;
   justify-content: center;
   font-family: "Segoe UI", Arial, sans-serif;

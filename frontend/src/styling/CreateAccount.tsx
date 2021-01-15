@@ -4,6 +4,7 @@ export const MainSection = styled.div`
   background-color: white;
   height: 100vh;
   color: black;
+  margin-top: 0.5rem;
 `;
 
 export const SecondarySection = styled.div`
@@ -12,12 +13,6 @@ export const SecondarySection = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-
-  img {
-    height: 3rem;
-    width: 6rem;
-    margin-top: 0.3rem;
-  }
 `;
 
 export const ItemArray = styled.div`
