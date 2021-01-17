@@ -4,6 +4,7 @@ import { StateContext, initialState, reducer } from "./context/StateContext";
 import { createGlobalStyle } from "styled-components";
 import Home from "./pages/public/Home";
 import Login from "./pages/public/Login";
+import TweetHome from "./pages/public/TweetHome";
 import CreateAccount from "./pages/public/CreateAccount";
 
 const Universal = createGlobalStyle`
@@ -29,6 +30,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/createaccount" component={CreateAccount} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/home" component={TweetHome} />
         </Switch>
       </Router>
     </StateContext.Provider>

@@ -79,7 +79,7 @@ const CreateAccount: React.FC = () => {
       passwordError("");
     }
 
-    if (state.password.length > 4 && state.password !== confirmedPassword) {
+    if (state.password !== confirmedPassword) {
       confirmpasswordError("Passwords do not match");
     } else {
       confirmpasswordError("");

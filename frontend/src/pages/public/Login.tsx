@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+import axios from "axios";
 import { NavLink } from "react-router-dom";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { APP_ACTIONS, StateContext } from "../../context/StateContext";
@@ -13,7 +14,7 @@ import {
 
 const Login: React.FC = () => {
   const { state, dispatch } = useContext<any>(StateContext);
-  const [credentialsError, setError] = useState<string>("Invalid Credentials.");
+  const [credentialsError, setError] = useState<string>("");
 
   const { email_address, password } = state;
 
@@ -32,11 +33,13 @@ const Login: React.FC = () => {
 
       const body = JSON.stringify(loggedInUser);
 
-      // const res = await axios.post("", body, config);
+      const res = await axios.post("/user/login", body, config);
 
-      // if (res.data === "Display name already in use") {
-      //   displaynameError("Display name already in use");
-      // }
+      if (res.data === "Invalid credentials") {
+        setError("Invalid credentials");
+      } else {
+        setError("");
+      }
     } catch (error) {
       console.log(error);
     }
@@ -55,11 +58,29 @@ const Login: React.FC = () => {
           <FormSection>
             {" "}
             <InputSpacer>
-              <input type="text" placeholder="Email address" />
+              <input
+                onChange={(e) => {
+                  dispatch({
+                    type: APP_ACTIONS.UPDATE_EMAIL,
+                    payload: e.target.value,
+                  });
+                }}
+                type="text"
+                placeholder="Email address"
+              />
             </InputSpacer>
             <InputSpacer>
               {" "}
-              <input type="password" placeholder="Password" />
+              <input
+                onChange={(e) => {
+                  dispatch({
+                    type: APP_ACTIONS.UPDATE_PASSWORD,
+                    payload: e.target.value,
+                  });
+                }}
+                type="password"
+                placeholder="Password"
+              />
               <ErrorMsg>{credentialsError}</ErrorMsg>
             </InputSpacer>
             <InputSpacer>

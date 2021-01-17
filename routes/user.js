@@ -126,7 +126,7 @@ router.post(
           );
 
           if (!credentialCompare) {
-            res.json("invalid credentials");
+            res.json("Invalid credentials");
           } else {
             const payload = {
               user: {

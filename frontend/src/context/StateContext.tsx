@@ -5,6 +5,7 @@ export interface IState {
   email_address: string;
   password: string;
   displayName: string;
+  token: string;
 }
 
 export const initialState = {
@@ -12,6 +13,7 @@ export const initialState = {
   email_address: "",
   password: "",
   displayName: "",
+  token: "",
 };
 
 export enum APP_ACTIONS {
@@ -19,6 +21,7 @@ export enum APP_ACTIONS {
   UPDATE_EMAIL = "UPDATE_EMAIL",
   UPDATE_PASSWORD = "UPDATE_PASSWORD",
   UPDATE_DISPLAY_NAME = "UPDATE_DISPLAY_NAME",
+  UPDATE_TOKEN = "UPDATE_TOKEN",
 }
 
 type AppAction = { [key: string]: (state: IState, action: any) => IState };
@@ -36,6 +39,9 @@ export const appActions: AppAction = {
 
   [APP_ACTIONS.UPDATE_DISPLAY_NAME]: (state: IState, actions: any) => {
     return { ...state, displayName: actions.payload };
+  },
+  [APP_ACTIONS.UPDATE_TOKEN]: (state: IState, actions: any) => {
+    return { ...state, token: actions.payload };
   },
 };
 
