@@ -16,7 +16,7 @@ app.use(express.json({ extended: false })); //body parser
 app.use("/user", require("./routes/user"));
 
 app.get("/", (req, res) => {
-  res.send("heyyyyy");
+  res.send("Welcome!");
 });
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));

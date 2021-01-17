@@ -76,7 +76,7 @@ export const ItemArray2 = styled.div`
   width: 50%;
 
   h1 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
 
   #twitter-title {

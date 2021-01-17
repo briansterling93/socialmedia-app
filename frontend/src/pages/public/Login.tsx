@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
-import mainLogo from "../../imgs/mainLogo.png";
 import { AiOutlineTwitter } from "react-icons/ai";
+import { APP_ACTIONS, StateContext } from "../../context/StateContext";
 import {
   MainSection,
   SecondarySection,
@@ -12,6 +12,36 @@ import {
 } from "../../styling/CreateAccount";
 
 const Login: React.FC = () => {
+  const { state, dispatch } = useContext<any>(StateContext);
+  const [credentialsError, setError] = useState<string>("Invalid Credentials.");
+
+  const { email_address, password } = state;
+
+  const handleInput = async () => {
+    try {
+      let loggedInUser = {
+        email_address: state.email_address,
+        password: state.password,
+      };
+
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+
+      const body = JSON.stringify(loggedInUser);
+
+      // const res = await axios.post("", body, config);
+
+      // if (res.data === "Display name already in use") {
+      //   displaynameError("Display name already in use");
+      // }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <MainSection>
       <SecondarySection>
@@ -26,18 +56,17 @@ const Login: React.FC = () => {
             {" "}
             <InputSpacer>
               <input type="text" placeholder="Email address" />
-              <ErrorMsg></ErrorMsg>
             </InputSpacer>
             <InputSpacer>
               {" "}
               <input type="password" placeholder="Password" />
-              <ErrorMsg></ErrorMsg>
+              <ErrorMsg>{credentialsError}</ErrorMsg>
             </InputSpacer>
             <InputSpacer>
               {" "}
-              <NavLink to="/">
-                <button>Log in</button>
-              </NavLink>
+              {/* <NavLink to="/"> */}
+              <button onClick={handleInput}>Log in</button>
+              {/* </NavLink> */}
             </InputSpacer>
             <NavLink to="/createaccount">Create an account here</NavLink>
           </FormSection>

@@ -23,6 +23,37 @@ const CreateAccount: React.FC = () => {
 
   const { name, displayName, email_address, password } = state;
 
+  const handleInput = async () => {
+    try {
+      let newUser = {
+        first_name: state.name,
+        display_name: state.displayName,
+        email_address: state.email_address,
+        password: state.password,
+      };
+
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+
+      const body = JSON.stringify(newUser);
+
+      const res = await axios.post("/user/newuser", body, config);
+
+      if (res.data === "Display name already in use") {
+        displaynameError("Display name already in use");
+      }
+
+      if (res.data === "Email address already in use") {
+        emailError("Email address already in use");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const handleSubmit = async () => {
     if (!state.name) {
       nameError("Enter your first name");
@@ -36,7 +67,7 @@ const CreateAccount: React.FC = () => {
       displaynameError("");
     }
 
-    if (!state.email_address) {
+    if (!state.email_address.includes("@" && ".")) {
       emailError("Enter an email address");
     } else {
       emailError("");
@@ -53,6 +84,18 @@ const CreateAccount: React.FC = () => {
     } else {
       confirmpasswordError("");
     }
+
+    if (
+      state.name &&
+      state.displayName &&
+      state.email_address.includes("@" && ".") &&
+      state.password === confirmedPassword
+    ) {
+      handleInput();
+    }
+
+    try {
+    } catch (error) {}
   };
 
   return (
