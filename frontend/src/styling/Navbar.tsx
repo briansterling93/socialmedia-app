@@ -13,6 +13,7 @@ export const TextDiv = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  
 
   button {
     width: 11rem;
@@ -36,25 +37,41 @@ export const TextDiv = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     padding: 0.5rem;
-    width: 20rem;
     height: 2rem;
+    
+
+    :hover {
+      background-color: #f0faff;
+      border-radius: 2rem;
+      color: #1da1f2;
+      font-weight: 750;
+
+      .NavBarImg {
+        color: #1da1f2;
+      }
+    }
   }
 
   .NavBarImg {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     color: #252525;
     width: 2.5rem;
-    // height: 2.5rem;
+    heightL 2rem;  
   }
 
   .NavBarTxt {
     width: 5rem;
     font-weight: 700;
+    font-size: 1.1rem;
+    height: 2rem;
   }
 
   #navbar-header {
     padding-bottom: 0.8rem;
+    width: 7.5rem;
+    font-size: 1.9rem;
   }
 
   #navbar-footer {

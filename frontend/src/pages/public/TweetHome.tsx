@@ -11,7 +11,9 @@ const TweetHome: React.FC = () => {
   return (
     <MainSection>
       <Section1>
-        <Navbar />
+        <div id="navbar-component">
+          <Navbar />
+        </div>
       </Section1>
       <Section2>s</Section2>
       <Section3>d</Section3>

@@ -15,8 +15,10 @@ const Navbar: React.FC = () => {
     <div>
       <MainSection>
         <TextDiv>
-          <div id="navbar-header">
-            <AiOutlineTwitter />
+          <div className="NavBarItem">
+            <div className="NavBarImg" id="navbar-header">
+              <AiOutlineTwitter />
+            </div>
           </div>
           <div className="NavBarItem">
             <div className="NavBarImg">
