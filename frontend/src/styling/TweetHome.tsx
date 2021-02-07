@@ -6,10 +6,9 @@ export const MainSection = styled.div`
 `;
 
 export const Section1 = styled.div`
-  width: 24%;
+  width: 27%;
   height: 100vh;
   background-color: white;
-  border-right: 0.5px solid #e8e8e8;
 
   #navbar-component {
     padding-left: 2rem;
@@ -18,11 +17,13 @@ export const Section1 = styled.div`
 `;
 
 export const Section2 = styled.div`
-  width: 49%;
+  width: 37%;
   background-color: white;
+  border-left: 0.5px solid #e8e8e8;
+  border-right: 0.5px solid #e8e8e8;
 `;
 
 export const Section3 = styled.div`
-  width: 27%;
-  background-color: #999;
+  width: 36%;
+  background-color: white;
 `;

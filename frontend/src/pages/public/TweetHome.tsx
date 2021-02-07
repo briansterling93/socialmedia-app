@@ -6,6 +6,7 @@ import {
   Section3,
 } from "../../styling/TweetHome";
 import Navbar from "../../components/Navbar";
+import Tweets from "../../components/Tweets";
 
 const TweetHome: React.FC = () => {
   return (
@@ -15,7 +16,9 @@ const TweetHome: React.FC = () => {
           <Navbar />
         </div>
       </Section1>
-      <Section2>s</Section2>
+      <Section2>
+        <Tweets />
+      </Section2>
       <Section3>d</Section3>
     </MainSection>
   );
