@@ -7,6 +7,7 @@ import {
 } from "../../styling/TweetHome";
 import Navbar from "../../components/Navbar";
 import Tweets from "../../components/Tweets";
+import TrendingFollow from "../../components/TrendingFollow";
 
 const TweetHome: React.FC = () => {
   return (
@@ -19,7 +20,9 @@ const TweetHome: React.FC = () => {
       <Section2>
         <Tweets />
       </Section2>
-      <Section3>d</Section3>
+      <Section3>
+        <TrendingFollow />
+      </Section3>
     </MainSection>
   );
 };
