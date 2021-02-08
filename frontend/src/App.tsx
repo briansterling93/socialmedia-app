@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { StateContext, initialState, reducer } from "./context/StateContext";
 import { createGlobalStyle } from "styled-components";
 import Home from "./pages/public/Home";
+import Profile from "./pages/private/Profile";
 import Login from "./pages/public/Login";
 import TweetHome from "./pages/public/TweetHome";
 import CreateAccount from "./pages/public/CreateAccount";
@@ -31,6 +32,7 @@ function App() {
           <Route exact path="/createaccount" component={CreateAccount} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/home" component={TweetHome} />
+          <Route exact path="/profile" component={Profile} />
         </Switch>
       </Router>
     </StateContext.Provider>

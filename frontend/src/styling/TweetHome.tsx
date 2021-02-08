@@ -11,7 +11,6 @@ export const Section1 = styled.div`
   background-color: white;
 
   #navbar-component {
-    margin-left: 11rem;
     padding-top: 0.5rem;
   }
 `;

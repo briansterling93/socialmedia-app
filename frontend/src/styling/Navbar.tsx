@@ -6,6 +6,7 @@ export const MainSection = styled.div`
   font-size: 1rem;
   diplay: flex;
   justify-content: center;
+  margin-left: 6rem;
 `;
 
 export const TextDiv = styled.div`
@@ -70,6 +71,7 @@ export const TextDiv = styled.div`
     padding-bottom: 0.8rem;
     width: 7.5rem;
     font-size: 1.9rem;
+    color: #1da1f2;
   }
   #navbar-footer {
     padding-top: 0.3rem;

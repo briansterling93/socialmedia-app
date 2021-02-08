@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
               <AiOutlineTwitter />
             </div>
           </div>
-          <NavLink to="/">
+          <NavLink to="/home">
             <div className="NavBarItem">
               <div className="NavBarImg">
                 <AiOutlineHome />
@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
               <div className="NavBarTxt">Lists</div>
             </div>
           </NavLink>
-          <NavLink to="/">
+          <NavLink to="/profile">
             <div className="NavBarItem">
               <div className="NavBarImg">
                 <BsPerson />
@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
               <div className="NavBarTxt">Profile</div>
             </div>
           </NavLink>
-          <NavLink to="/">
+          <NavLink to="/home">
             <div className="NavBarItem">
               <div className="NavBarImg">
                 <AiOutlineSetting />
