@@ -1,5 +1,5 @@
 import React from "react";
-import { MainSection } from "../styling/ProfilePage";
+import { MainSection, TweetSection } from "../styling/ProfilePage";
 import { BiArrowBack } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 import defaultHeader from "../imgs/defaultHeader.jpg";
@@ -37,6 +37,15 @@ const ProfilePage: React.FC = () => {
             </span>
           </div>
         </div>
+        <TweetSection>
+          <div id="tweets-container">
+            <div id="tweets-header">
+              <div className="header-item">Tweets</div>
+
+              <div className="header-item">Likes</div>
+            </div>
+          </div>
+        </TweetSection>
       </div>
     </MainSection>
   );

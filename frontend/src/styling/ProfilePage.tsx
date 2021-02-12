@@ -46,9 +46,8 @@ export const MainSection = styled.div`
   }
 
   #profile-container {
-    height: 21rem;
+    height: 19rem;
     width: 100%;
-    // background-color: #999;
   }
 
   #profile-header {
@@ -99,4 +98,33 @@ export const MainSection = styled.div`
     }
   }
 
+`;
+
+export const TweetSection = styled.div`
+  height: 10rem;
+  width: 100%;
+
+  #tweets-header {
+    display: flex;
+    height: 2rem;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-bottom: 0.5px solid #e8e8e8;
+  }
+
+  .header-item {
+    color: #7f7f7f;
+    font-weight: 800;
+    font-size: 0.9rem;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    :hover {
+      transition: 0.5s;
+      color: #1da1f2;
+      cursor: pointer;
+      background-color: #f0faff;
+    }
+  }
 `;
