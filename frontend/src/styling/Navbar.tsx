@@ -38,6 +38,7 @@ export const TextDiv = styled.div`
     color: white;
     :hover {
       background-color: #007cce;
+      transition: 0.2s;
     }
   }
   .NavBarItem {
@@ -51,8 +52,11 @@ export const TextDiv = styled.div`
     :hover {
       border-radius: 2rem;
       font-weight: 750;
+      transition: 0.2s;
+
       .NavBarImg {
         color: #1da1f2;
+        transition: 0.2s;
       }
     }
   }

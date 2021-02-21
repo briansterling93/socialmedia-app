@@ -2,6 +2,8 @@ import React from "react";
 import { MainSection, TweetSection } from "../styling/ProfilePage";
 import { BiArrowBack } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
+import UserLikes from "./UserLikes";
+import UserTweets from "./UserTweets";
 import defaultHeader from "../imgs/defaultHeader.jpg";
 
 const ProfilePage: React.FC = () => {
@@ -16,7 +18,7 @@ const ProfilePage: React.FC = () => {
             </NavLink>
           </div>
           <div id="name-tweets">
-            <span id="name">Brian $.</span>
+            <span id="name">Brian</span>
             <span id="tweets">2 Tweets</span>
           </div>
         </div>
@@ -24,7 +26,7 @@ const ProfilePage: React.FC = () => {
           <div id="profile-header"></div>
           <div id="profile-photo">BS</div>
           <div id="profile-info">
-            <div id="user-name">Brian $.</div>
+            <div id="user-name">Brian</div>
             <div id="at-name">@brian</div>
             <span id="follower-info">
               {" "}
@@ -43,6 +45,9 @@ const ProfilePage: React.FC = () => {
               <div className="header-item">Tweets</div>
 
               <div className="header-item">Likes</div>
+            </div>
+            <div className="tweet-like-data">
+              <UserTweets />
             </div>
           </div>
         </TweetSection>

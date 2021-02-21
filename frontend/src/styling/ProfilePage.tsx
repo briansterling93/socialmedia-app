@@ -114,17 +114,22 @@ export const TweetSection = styled.div`
 
   .header-item {
     color: #7f7f7f;
-    font-weight: 800;
-    font-size: 0.9rem;
+    font-weight: 700;
+    font-size: 0.8rem;
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     :hover {
-      transition: 0.5s;
+      transition: 0.4s;
       color: #1da1f2;
       cursor: pointer;
       background-color: #f0faff;
     }
+  }
+
+  .tweet-like-data {
+    width: 100%;
+    text-align: center;
   }
 `;

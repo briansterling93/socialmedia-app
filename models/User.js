@@ -11,6 +11,9 @@ const User = db.define("users", {
   email_address: {
     type: Sequelize.STRING,
   },
+  tweets: {
+    type: Sequelize.STRING,
+  },
   password: {
     type: Sequelize.STRING,
   },
