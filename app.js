@@ -11,9 +11,11 @@ const path = require("path");
 
 const app = express();
 
-app.use(express.json({ extended: false })); //body parser
+app.use(express.json({ extended: false })); //json body parser
 
 app.use("/user", require("./routes/user"));
+
+app.use("/tweets", require("./routes/tweets"));
 
 app.get("/", (req, res) => {
   res.send("Welcome!");

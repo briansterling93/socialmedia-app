@@ -7,8 +7,6 @@ import Profile from "./pages/private/Profile";
 import Login from "./pages/public/Login";
 import TweetHome from "./pages/public/TweetHome";
 import CreateAccount from "./pages/public/CreateAccount";
-import UserLikes from "./components/UserLikes";
-import UserTweets from "./components/UserTweets";
 
 const Universal = createGlobalStyle`
  body {
@@ -33,8 +31,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/createaccount" component={CreateAccount} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/usertweets" component={UserTweets} />
-          <Route exact path="/userlikes" component={UserLikes} />
+
           <Route exact path="/home" component={TweetHome} />
           <Route exact path="/profile" component={Profile} />
         </Switch>

@@ -133,7 +133,7 @@ const CreateAccount: React.FC = () => {
                     payload: e.target.value,
                   });
                 }}
-                placeholder="Desired display name"
+                placeholder="Desired display/@ name"
               />
               <ErrorMsg>{UIdisplayname}</ErrorMsg>
             </InputSpacer>

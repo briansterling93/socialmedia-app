@@ -13,7 +13,13 @@ const Sequelize = require("sequelize");
 router.get("/", async (req, res) => {
   try {
     const allUsers = await User.findAll({
-      attributes: ["first_name", "display_name", "email_address", "createdAt"],
+      attributes: [
+        "first_name",
+        "display_name",
+        "email_address",
+        "createdAt",
+        "id",
+      ],
     });
 
     res.json({ allUsers });
