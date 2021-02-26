@@ -2,7 +2,6 @@ import React from "react";
 import { MainSection, TweetSection } from "../styling/ProfilePage";
 import { BiArrowBack } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
-import defaultHeader from "../imgs/defaultHeader.jpg";
 
 const ProfilePage: React.FC = () => {
   return (
@@ -44,7 +43,6 @@ const ProfilePage: React.FC = () => {
 
               <div className="header-item">Likes</div>
             </div>
-            <div className="tweet-like-data"></div>
           </div>
         </TweetSection>
       </div>

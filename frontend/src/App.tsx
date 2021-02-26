@@ -2,11 +2,15 @@ import React, { useReducer } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { StateContext, initialState, reducer } from "./context/StateContext";
 import { createGlobalStyle } from "styled-components";
-import Home from "./pages/public/Home";
-import Profile from "./pages/private/Profile";
+
+//public pages
 import Login from "./pages/public/Login";
-import TweetHome from "./pages/public/TweetHome";
 import CreateAccount from "./pages/public/CreateAccount";
+import Home from "./pages/public/Home";
+
+//private pages
+import TweetHome from "./pages/private/TweetHome";
+import Profile from "./pages/private/Profile";
 
 const Universal = createGlobalStyle`
  body {
@@ -31,7 +35,6 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/createaccount" component={CreateAccount} />
           <Route exact path="/login" component={Login} />
-
           <Route exact path="/home" component={TweetHome} />
           <Route exact path="/profile" component={Profile} />
         </Switch>

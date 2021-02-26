@@ -28,6 +28,21 @@ router.get("/", async (req, res) => {
   }
 });
 
+//Find current user info with token
+//GET Request
+router.get("/authorized", auth, async (req, res) => {
+  try {
+    const user = await User.findOne({
+      where: {
+        id: req.user.id,
+      },
+    });
+    res.json(user);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 //Create New User
 //POST Request
 router.post(

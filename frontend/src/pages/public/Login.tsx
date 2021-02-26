@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
-import { NavLink } from "react-router-dom";
+import { NavLink, Redirect } from "react-router-dom";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { APP_ACTIONS, StateContext } from "../../context/StateContext";
 import {
@@ -15,6 +15,7 @@ import {
 const Login: React.FC = () => {
   const { state, dispatch } = useContext<any>(StateContext);
   const [credentialsError, setError] = useState<string>("");
+  const [route, setRoute] = useState<any>("");
 
   const { email_address, password } = state;
 
@@ -35,11 +36,14 @@ const Login: React.FC = () => {
 
       const res = await axios.post("/user/login", body, config);
 
-      if (res.data === "Invalid credentials") {
-        setError("Invalid credentials");
-      } else {
-        setError("");
-      }
+      await dispatch({
+        type: APP_ACTIONS.UPDATE_TOKEN,
+        payload: res.data.token,
+      });
+
+      (await res.data.token)
+        ? setRoute(<Redirect to="/home" />)
+        : setError("Invalid credentials");
     } catch (error) {
       console.log(error);
     }
@@ -47,6 +51,7 @@ const Login: React.FC = () => {
 
   return (
     <MainSection>
+      {route}
       <SecondarySection>
         <NavLink to="/">
           <div id="twitter-logo">
